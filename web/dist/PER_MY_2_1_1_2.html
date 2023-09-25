@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>하나카드 모바일 다이렉트 고객센터</title>
+
+    <meta charset="euc-kr" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-find-zip-code">우편번호 찾기</a>
+
+    <!-- layer: 우편번호 찾기 -->
+    <div class="layer-wrap layer-wrap--full layer-find-zip-code" data-layer="layer-find-zip-code">
+      <div class="layer-container">
+        <section class="ui-layer">
+          <div class="ui-layer__head">
+            <div class="header">
+              <h2 class="header__title">
+                <span class="header__title__inner">우편번호 찾기</span>
+              </h2>
+              <div class="header__right">
+                <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                  <span class="for-a11y">레이어 닫기</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="ui-layer__body">
+            <div class="ui-layer__body-inner">
+              <!-- DD : 검색 -->
+              <div class="zip-code-search js-ui-tab-panel">
+                <div class="fill-tab">
+                  <ul class="fill-tab__list">
+                    <li class="fill-tab__item">
+                      <a href="" class="fill-tab__button" data-tab-open="zipCode1">
+                        <span class="fill-tab__text">검색어로 찾기</span>
+                      </a>
+                    </li>
+                    <li class="fill-tab__item">
+                      <a href="" class="fill-tab__button" data-tab-open="zipCode2">
+                        <span class="fill-tab__text">도로명/지번으로 찾기</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- DD : 검색어 -->
+                <div class="zip-code-panel zip-code-panel--keyword" data-tab="zipCode1">
+                  <div class="form-row">
+                    <p class="basic-text">
+                      [통합검색]<br />
+                      도로명+건물번호, 건물명, 지번을 입력하세요．
+                    </p>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-flex basic-search-form">
+                      <div class="form-flex__cell form-flex__cell--flexible">
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="검색어" placeholder="통합검색" />
+                          <button type="button" class="ui-button ui-input-delete">
+                            <span class="for-a11y">입력 내용 지우기</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-flex__cell">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary basic-search-form__submit">검색</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <p class="basic-text color-blue-gray-light">
+                      도로명+건물번호 - 예) 남대문로9길 24<br />
+                      건물명 - 예) 하나카드빌딩<br />
+                      동/읍/면/리+번지 - 예) 다동 140
+                    </p>
+                  </div>
+
+                  <!-- Case : 결과 없음 -->
+                  <div class="zip-code-contents">
+                    <div class="zip-code-list">
+                      <div class="empty-contents">
+                        <p class="empty-contents__text">검색결과가 없습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //Case : 결과 없음 -->
+
+                  <!-- Case : 결과 있음 -->
+                  <div class="zip-code-contents">
+                    <p class="zip-code-total-text">총 <strong class="color-violet">561</strong>건</p>
+
+                    <div class="zip-code-list">
+                      <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                      <p class="zip-code-list__notice">아래 해당하는 주소를 선택해 주세요.</p>
+                      <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                      <ul class="zip-code-list__list">
+                        <li class="zip-code-list__item">
+                          <div class="zip-code-list__row zip-code-list__row--center">
+                            <div class="zip-code-list__row-item">
+                              <div class="zip-code-list__row">
+                                <span class="status-tag status-tag--violet zip-code-list__type">도로명</span>
+                                <span class="zip-code-list__address">인천 서구 에코로 181 하나금융그룹 통합데이터센터</span>
+                              </div>
+                              <div class="zip-code-list__row">
+                                <span class="status-tag zip-code-list__type">지번</span>
+                                <span class="zip-code-list__address zip-code-list__address--number">인천 서구 청라 7-5 하나금융그룹 통합데이터센터</span>
+                              </div>
+                            </div>
+                            <span class="zip-code-list__code">22742</span>
+                          </div>
+                          <button type="button" class="ui-button zip-code-list__link">
+                            <span class="for-a11y">이 주소 선택</span>
+                          </button>
+                        </li>
+                        <li class="zip-code-list__item">
+                          <div class="zip-code-list__row zip-code-list__row--center">
+                            <div class="zip-code-list__row-item">
+                              <div class="zip-code-list__row">
+                                <span class="status-tag status-tag--violet zip-code-list__type">도로명</span>
+                                <span class="zip-code-list__address">인천 서구 에코로 181 하나금융그룹 통합데이터센터</span>
+                              </div>
+                              <div class="zip-code-list__row">
+                                <span class="status-tag zip-code-list__type">지번</span>
+                                <span class="zip-code-list__address zip-code-list__address--number">인천 서구 청라 7-5 하나금융그룹 통합데이터센터</span>
+                              </div>
+                            </div>
+                            <span class="zip-code-list__code">22742</span>
+                          </div>
+                          <button type="button" class="ui-button zip-code-list__link">
+                            <span class="for-a11y">이 주소 선택</span>
+                          </button>
+                        </li>
+                        <li class="zip-code-list__item">
+                          <div class="zip-code-list__row zip-code-list__row--center">
+                            <div class="zip-code-list__row-item">
+                              <div class="zip-code-list__row">
+                                <span class="status-tag status-tag--violet zip-code-list__type">도로명</span>
+                                <span class="zip-code-list__address">인천 서구 에코로 181 하나금융그룹 통합데이터센터</span>
+                              </div>
+                              <div class="zip-code-list__row">
+                                <span class="status-tag zip-code-list__type">지번</span>
+                                <span class="zip-code-list__address zip-code-list__address--number">인천 서구 청라 7-5 하나금융그룹 통합데이터센터</span>
+                              </div>
+                            </div>
+                            <span class="zip-code-list__code">22742</span>
+                          </div>
+                          <button type="button" class="ui-button zip-code-list__link">
+                            <span class="for-a11y">이 주소 선택</span>
+                          </button>
+                        </li>
+                      </ul>
+
+                      <div class="more-button-block">
+                        <!-- 2021.02.25 : mod : button -> span 태그 변경 -->
+                        <span class="more-button">더보기</span>
+                        <!-- //2021.02.25 : mod : button -> span 태그 변경 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //Case : 결과 있음 -->
+                </div>
+                <!-- //DD : 검색어 -->
+
+                <!-- DD : 도로명/지번 -->
+                <div class="zip-code-panel zip-code-panel--names-or-number" data-tab="zipCode2">
+                  <div class="js-ui-tab-panel">
+                    <div class="box-tab">
+                      <ul class="box-tab__list">
+                        <li class="box-tab__item">
+                          <a href="" class="box-tab__button" data-tab-open="zipCodeNamesOrNumber1">
+                            <span class="box-tab__text">도로명</span>
+                          </a>
+                        </li>
+                        <li class="box-tab__item">
+                          <a href="" class="box-tab__button" data-tab-open="zipCodeNamesOrNumber2">
+                            <span class="box-tab__text">지번</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div data-tab="zipCodeNamesOrNumber1">
+                      <div class="form-row">
+                        <div class="input-row">
+                          <div class="expiry-date-select">
+                            <div class="expiry-date-select__month">
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="시/도">
+                                  <option value="-1" disabled selected>시/도</option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="expiry-date-select__year">
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="시/군/구">
+                                  <option value="-1" disabled selected>시/군/구</option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-row">
+                          <div class="form-flex basic-search-form">
+                            <div class="form-flex__cell form-flex__cell--flexible">
+                              <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="검색어" placeholder="도로명 입력" />
+                                <button type="button" class="ui-button ui-input-delete">
+                                  <span class="for-a11y">입력 내용 지우기</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="form-flex__cell">
+                              <button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary basic-search-form__submit">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <p class="basic-text color-blue-gray-light">
+                          <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                          찾으실 도로명을 정확히 입력해 주세요.<br />
+                          <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                          예) 서울시 강남구 선릉로일 경우, ‘선릉로’만 입력
+                        </p>
+                      </div>
+                    </div>
+
+                    <div data-tab="zipCodeNamesOrNumber2">
+                      <div class="form-row">
+                        <div class="form-flex basic-search-form">
+                          <div class="form-flex__cell form-flex__cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="검색어" placeholder="동(읍,면) 입력" />
+                              <button type="button" class="ui-button ui-input-delete">
+                                <span class="for-a11y">입력 내용 지우기</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="form-flex__cell">
+                            <button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary basic-search-form__submit">검색</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <p class="basic-text color-blue-gray-light">
+                          <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                          찾으실 동(읍, 면)을 정확히 입력해 주세요.<br />
+                          <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                          예) 삼성 1동일 경우 ‘삼성1’만 입력
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Case : 결과 없음 -->
+                    <div class="zip-code-contents">
+                      <div class="zip-code-list">
+                        <div class="empty-contents">
+                          <p class="empty-contents__text">검색결과가 없습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Case : 결과 없음 -->
+
+                    <!-- Case : 결과 있음 -->
+                    <div class="zip-code-contents">
+                      <div class="zip-code-list">
+                        <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                        <p class="zip-code-list__notice">아래 해당하는 주소를 선택해 주세요.</p>
+                        <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                        <ul class="zip-code-list__list">
+                          <li class="zip-code-list__item">
+                            <div class="zip-code-list__row">
+                              <span class="zip-code-list__code">22742</span>
+                              <span class="zip-code-list__address">서울 중구 선릉로 11길</span>
+                            </div>
+                            <button type="button" class="ui-button zip-code-list__link">
+                              <span class="for-a11y">이 주소 선택</span>
+                            </button>
+                          </li>
+                          <li class="zip-code-list__item">
+                            <div class="zip-code-list__row">
+                              <span class="zip-code-list__code">22742</span>
+                              <span class="zip-code-list__address">서울 중구 선릉로 11길</span>
+                            </div>
+                            <button type="button" class="ui-button zip-code-list__link">
+                              <span class="for-a11y">이 주소 선택</span>
+                            </button>
+                          </li>
+                          <li class="zip-code-list__item">
+                            <div class="zip-code-list__row">
+                              <span class="zip-code-list__code">22742</span>
+                              <span class="zip-code-list__address">서울 중구 선릉로 11길</span>
+                            </div>
+                            <button type="button" class="ui-button zip-code-list__link">
+                              <span class="for-a11y">이 주소 선택</span>
+                            </button>
+                          </li>
+                        </ul>
+
+                        <div class="more-button-block">
+                          <!-- 2021.02.25 : mod : button -> span 태그 변경 -->
+                          <span class="more-button">더보기</span>
+                          <!-- //2021.02.25 : mod : button -> span 태그 변경 -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Case : 결과 있음 -->
+                  </div>
+                </div>
+                <!-- //DD : 도로명/지번 -->
+              </div>
+              <!-- //DD : 검색 -->
+
+              <!-- DD : 상세 주소 -->
+              <div class="zip-code-detail-address">
+                <section class="primary-section">
+                  <div class="primary-section__head">
+                    <h3 class="primary-section__title">상세 주소 입력</h3>
+                  </div>
+                  <div class="primary-section__body">
+                    <dl class="form-item">
+                      <dt class="form-item__key">기본주소</dt>
+                      <dd class="form-item__val">
+                        <div class="gray-box gray-box--in-contents gray-box--deep">
+                          <p class="basic-text color-blue-gray">서울강남구 선릉로</p>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="form-item">
+                      <dt class="form-item__key">상세주소</dt>
+                      <dd class="form-item__val">
+                        <div class="form-flex basic-search-form">
+                          <div class="form-flex__cell form-flex__cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="상세주소" placeholder="상세주소" />
+                              <button type="button" class="ui-button ui-input-delete">
+                                <span class="for-a11y">입력 내용 지우기</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="form-flex__cell">
+                            <button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary basic-search-form__submit">확인</button>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+
+                    <!-- Case : 결과 없음 -->
+                    <div class="zip-code-contents">
+                      <div class="zip-code-list">
+                        <div class="empty-contents">
+                          <p class="empty-contents__text">
+                            입력하신 주소는<br />
+                            표준화 및 도로명이 없는 주소입니다.<br />
+                            <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                            상세주소를 정확히 입력해 주세요.
+                            <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                          </p>
+                        </div>
+                        <div class="zip-code-list__list">
+                          <div class="zip-code-detail-address__empty-check">
+                            <p class="zip-code-detail-address__empty-check__address">서울 중구 선릉로 123123</p>
+                            <p class="zip-code-detail-address__empty-check__notice">입력하신 상세주소가 정확하다면</p>
+                            <div class="zip-code-detail-address__empty-check__button">
+                              <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--inline-block">해당 주소로 입력</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Case : 결과 없음 -->
+
+                    <!-- 2021.02.24 : mod : 상세주소 결과 화면 변경 -->
+                    <!-- Case : 결과 있음 -->
+                    <div class="zip-code-contents">
+                      <div class="zip-code-list">
+                        <!-- 2021.04.01 : mod : 띄어쓰기 수정 -->
+                        <p class="zip-code-list__notice">아래 해당하는 주소를 선택해 주세요.</p>
+                        <!-- //2021.04.01 : mod : 띄어쓰기 수정 -->
+                        <ul class="zip-code-list__list">
+                          <li class="zip-code-list__item">
+                            <div class="zip-code-list__row">
+                              <span class="status-tag status-tag--violet zip-code-list__type">도로명</span>
+                              <span class="zip-code-list__address">
+                                22742<br />
+                                서울 강남구 선릉로 66 (선릉)
+                              </span>
+                            </div>
+                            <button type="button" class="ui-button zip-code-list__link">
+                              <span class="for-a11y">이 주소 선택</span>
+                            </button>
+                          </li>
+                          <li class="zip-code-list__item">
+                            <div class="zip-code-list__row">
+                              <span class="status-tag zip-code-list__type">지번</span>
+                              <span class="zip-code-list__address zip-code-list__address--number">
+                                22742<br />
+                                서울 강남구 선릉 7-5번지
+                              </span>
+                            </div>
+                            <button type="button" class="ui-button zip-code-list__link">
+                              <span class="for-a11y">이 주소 선택</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Case : 결과 있음 -->
+                    <!-- //2021.02.24 : mod : 상세주소 결과 화면 변경 -->
+                  </div>
+                </section>
+              </div>
+              <!-- //DD : 상세 주소 -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 우편번호 찾기 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-find-zip-code');
+      });
+
+      // DD : 무한스크롤 가이딩
+      var isLoading = false; // 데이터 통신중에 중복 통신 안 되게 끔 조절하기 위한 변수
+      var page = 0; // 데이터 페이지
+      var $moreText = $('.more-button-block');
+
+      $moreText.css('display', 'none'); // 더보기 문구 감추기
+
+      function dataLoad($list, htmlReturn) {
+        if (!isLoading) {
+          isLoading = true;
+          $moreText.css('display', 'block'); // 더보기 문구 보이기
+
+          $.ajax({
+            type: 'GET',
+            url: '../test/api/PER_MY_2_1_1_2.json?page=' + page,
+            success: function (data) {
+              var html = '';
+              $.each(data.data, function () {
+                html += htmlReturn(this);
+              });
+              $list.append(html);
+              page++;
+              console.log(data.data, page);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR, textStatus, errorThrown);
+            },
+            complete: function () {
+              isLoading = false;
+              $moreText.css('display', 'none'); // 더보기 문구 감추기
+            },
+          });
+        }
+      }
+
+      var $keywordList = $('.zip-code-panel--keyword .zip-code-list__list');
+      var $namesOrNumberList = $('.zip-code-panel--names-or-number .zip-code-list__list');
+
+      // 스크롤로 로드
+      $('.layer-find-zip-code .ui-layer__body').on('scroll', function () {
+        var $this = $(this);
+        var scrollTop = $this.scrollTop();
+        var winH = $this.height();
+        var scrollH = $this.get(0).scrollHeight;
+
+        if (scrollTop > scrollH - winH - 100) {
+          if (!$keywordList.is(':hidden')) {
+            // 검색어로 찾기가 열려 있는 경우
+            dataLoad($keywordList, function (data) {
+              return (
+                '<li class="zip-code-list__item">' +
+                '<div class="zip-code-list__row zip-code-list__row--center">' +
+                '<div class="zip-code-list__row-item">' +
+                '<div class="zip-code-list__row">' +
+                '<span class="status-tag status-tag--violet zip-code-list__type">도로명</span>' +
+                '<span class="zip-code-list__address">' +
+                data.loadName +
+                '</span>' +
+                '</div>' +
+                '<div class="zip-code-list__row">' +
+                '<span class="status-tag zip-code-list__type">지번</span>' +
+                '<span class="zip-code-list__address zip-code-list__address--number">' +
+                data.parcelBasedSystem +
+                '</span>' +
+                '</div>' +
+                '</div>' +
+                '<span class="zip-code-list__code">' +
+                data.zipCode +
+                '</span>' +
+                '</div>' +
+                '<button type="button" class="ui-button zip-code-list__link">' +
+                '<span class="for-a11y">이 주소 선택</span>' +
+                '</button>' +
+                '</li>'
+              );
+            });
+          }
+          if (!$namesOrNumberList.is(':hidden')) {
+            // 도로명/지번으로 찾기가 열려 있는 경우
+            dataLoad($namesOrNumberList, function (data) {
+              return (
+                '<li class="zip-code-list__item">' +
+                '<div class="zip-code-list__row">' +
+                '<span class="zip-code-list__code">' +
+                data.zipCode +
+                '</span>' +
+                '<span class="zip-code-list__address">' +
+                data.loadName +
+                '</span>' +
+                '</div>' +
+                '<button type="button" class="ui-button zip-code-list__link">' +
+                '<span class="for-a11y">이 주소 선택</span>' +
+                '</button>' +
+                '</li>'
+              );
+            });
+          }
+        }
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

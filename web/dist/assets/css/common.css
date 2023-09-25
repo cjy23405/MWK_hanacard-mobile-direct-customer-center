@@ -1,0 +1,50 @@
+@import '../fonts/NotoSansKR-Hestia/style.css';
+
+html,
+body,
+pre,
+button,
+select,
+textarea,
+[type='button'],
+[type='submit'],
+[type='text'],
+[type='password'],
+[type='search'],
+[type='email'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='file'],
+[type='date'],
+[type='time'] {
+  font-family: 'Noto Sans Korean', '¸¼Àº°íµñ', 'Malgun Gothic', 'µ¸¿ò', Dotum, 'Apple Gothic', sans-serif;
+  color: #181818;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+textarea,
+[type='text'],
+[type='password'],
+[type='search'],
+[type='email'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='file'],
+[type='date'],
+[type='time'] {
+  -webkit-text-fill-color: #181818;
+}
+
+button:focus,
+[type='button']:focus,
+[type='submit']:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+}
+
+label {
+  cursor: pointer;
+}

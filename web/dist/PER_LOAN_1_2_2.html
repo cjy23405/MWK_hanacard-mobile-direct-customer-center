@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>하나카드 모바일 다이렉트 고객센터</title>
+
+    <meta charset="euc-kr" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-method-of-repayment-guide">상환방법 안내</a>
+
+    <!-- layer: 상환방법 안내 -->
+    <div class="layer-wrap layer-alert layer-method-of-repayment-guide" data-layer="layer-method-of-repayment-guide">
+      <div class="layer-container">
+        <section class="ui-alert">
+          <div class="ui-alert__head">
+            <div class="ui-alert-header">
+              <h2 class="ui-alert-header__title">상환방법 안내</h2>
+            </div>
+          </div>
+          <div class="ui-alert__body ui-alert__body--scroll">
+            <div class="ui-alert__body-inner">
+              <div class="primary-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>거치상환</th>
+                      <td>
+                        <div class="input-row">거치기간에는 이자만 납부하고 나머지 대출기간에는 원금 균등 또는 원리금 균등 상환으로 납부</div>
+                        <div class="input-row">
+                          <span class="basic-text basic-text--small color-blue-gray">(대출기간 : 3개월 ~ 최대 36개월)</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>원리금균등상환</th>
+                      <td>
+                        <div class="input-row">대출기간 동안 매월 동일한 금액으로 원금과 이자 납부</div>
+                        <div class="input-row">
+                          <span class="basic-text basic-text--small color-blue-gray">(대출기간 : 3개월 ~ 최대 36개월)</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>원금균등상환</th>
+                      <td>
+                        <div class="input-row">대출기간 동안 매월 동일하게 원금을 납부하고 잔여원금에 대한 이자 납부</div>
+                        <div class="input-row">
+                          <span class="basic-text basic-text--small color-blue-gray">(대출기간 : 3개월 ~ 최대 36개월)</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>만기일시상환</th>
+                      <td>
+                        <div class="input-row">대출기간 동안 매월 이자만 납부하다가 만기일에 원금을 일시 납부</div>
+                        <div class="input-row">
+                          <span class="basic-text basic-text--small color-blue-gray">(대출기간 : 6개월 ~ 최대 12개월)</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="ui-alert__foot">
+            <div class="ui-buttons">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--regular" data-role="layerClose">확인</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 상환방법 안내 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-method-of-repayment-guide');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

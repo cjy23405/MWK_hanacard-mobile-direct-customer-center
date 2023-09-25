@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>하나카드 모바일 다이렉트 고객센터</title>
+
+    <meta charset="euc-kr" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-report-missing-check">분실신고 확인</a>
+
+    <!-- layer: 얼럿형 -->
+    <div class="layer-wrap layer-alert layer-report-missing-check" data-layer="layer-report-missing-check">
+      <div class="layer-container">
+        <section class="ui-alert">
+          <div class="ui-alert__head">
+            <div class="ui-alert-header">
+              <h2 class="ui-alert-header__title">분실신고 확인</h2>
+              <button type="button" class="ui-button ui-alert-header__close" data-role="layerClose">
+                <span class="for-a11y">레이어 닫기</span>
+              </button>
+            </div>
+          </div>
+          <div class="ui-alert__body">
+            <div class="ui-alert__body-inner">
+              <p class="ui-alert-message">
+                선택하신 카드를<br />
+                분실신고 하시겠습니까?<br /><br />
+
+                확인버튼을 누르시면<br />
+                선택하신 카드는 사용 정지됩니다.
+              </p>
+              <div class="gray-box gray-box--in-contents">
+                <ul class="dot-list">
+                  <li class="dot-list__item">
+                    [본인] 카카오페이 MUZI체크카드<br />
+                    4021-75**-****-0453
+                  </li>
+                  <li class="dot-list__item">
+                    [계좌지정] 프리미엄법인카드<br />
+                    9153-77**-****-9215
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ui-alert__foot">
+            <div class="ui-buttons">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--secondary">취소</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--regular">확인</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 얼럿형 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-report-missing-check');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

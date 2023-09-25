@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>하나카드 모바일 다이렉트 고객센터</title>
+
+    <meta charset="euc-kr" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-password-error">비밀번호 오류 횟수 초과</a>
+
+    <!-- layer: 비밀번호 오류 횟수 초과 -->
+    <div class="layer-wrap layer-password-error" data-layer="layer-password-error">
+      <div class="layer-container">
+        <section class="ui-alert">
+          <div class="ui-alert__head">
+            <div class="ui-alert-header">
+              <h2 class="ui-alert-header__title">비밀번호 오류 횟수 초과</h2>
+            </div>
+          </div>
+          <div class="ui-alert__body">
+            <div class="ui-alert__body-inner">
+              <p class="ui-alert-message">
+                비밀번호 오류 횟수 초과로 회원인증을<br />
+                할 수 없습니다.<br />
+                <!-- 2021.03.31 : mod : 띄어쓰기 수정 및 따옴표 변경 -->
+                ‘채팅상담’을 통해 초기화 후<br />
+                서비스를 이용해 주시기 바랍니다.
+                <!-- //2021.03.31 : mod : 띄어쓰기 수정 및 따옴표 변경 -->
+              </p>
+              <p class="ui-alert-message--small align-center">
+                현재 업무시간이 아니므로 상담원을 통한<br />
+                일반 상담은 불가능합니다.
+              </p>
+            </div>
+          </div>
+          <div class="ui-alert__foot">
+            <div class="ui-buttons">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <a href="" class="ui-basic-button ui-basic-button--regular">채팅상담</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 비밀번호 오류 횟수 초과 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-password-error');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

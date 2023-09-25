@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>하나카드 모바일 다이렉트 고객센터</title>
+
+    <meta charset="euc-kr" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="layout-wrap">
+        <div class="header-wrap">
+          <div class="calling-bar">
+            <div class="calling-bar__left">
+              <p class="calling-bar__logo"><span class="for-a11y">하나카드</span></p>
+            </div>
+            <div class="calling-bar__right">
+              <p class="calling-bar__time">
+                <span class="calling-bar__time-title">통화시간</span>
+                <span class="calling-bar__time-num">00:47</span>
+              </p>
+            </div>
+          </div>
+          <header class="header">
+            <h1 class="header__title">
+              <span class="header__title__inner">사용등록</span>
+            </h1>
+            <div class="header__left">
+              <a href="" class="header__button header__button--back">
+                <span class="for-a11y">뒤로</span>
+              </a>
+            </div>
+            <div class="header__right">
+              <button type="button" class="ui-button header__button header__button--menu" data-layer-open="layer-gnb">
+                <span class="for-a11y">메뉴 열기</span>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <!-- layer: GNB -->
+        <div class="layer-wrap layer-gnb" data-layer="layer-gnb">
+          <div class="layer-container">
+            <nav class="gnb">
+              <div class="gnb__head">
+                <h2 class="for-a11y">메뉴</h2>
+                <div class="header">
+                  <p class="header__title">
+                    <a href="" class="header__title__inner">
+                      <span class="header__logo"><span class="for-a11y">하나카드 다이렉트 고객센터</span></span>
+                    </a>
+                  </p>
+                  <div class="header__right">
+                    <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                      <span class="for-a11y">메뉴 닫기</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="search-form">
+                  <form action="">
+                    <div class="ui-input-block">
+                      <input type="search" class="ui-input" title="통합검색" placeholder="검색어를 입력하세요." />
+                      <button type="button" class="ui-button ui-input-delete">
+                        <span class="for-a11y">입력 내용 지우기</span>
+                      </button>
+                    </div>
+                    <button type="submit" class="ui-button search-form__submit">
+                      <span class="for-a11y">검색</span>
+                    </button>
+                    <!-- 2021.03.05 : add : 빠른검색 레이어 추가 -->
+                    <!-- DD: 빠른검색 데이터 없을 경우 .search-form__layer에 display: none; -->
+                    <div class="search-form__layer">
+                      <div class="quick-keyword">
+                        <ul class="quick-keyword__list">
+                          <li class="quick-keyword__item">
+                            <a href="" class="quick-keyword__link">
+                              <!-- 2021.03.10 : del : 빠른검색 문구 제거
+                              <span class="quick-keyword__tag">빠른검색</span>
+                              -->
+                              <span class="quick-keyword__text">분실<mark>신고</mark></span>
+                            </a>
+                          </li>
+                          <li class="quick-keyword__item">
+                            <a href="" class="quick-keyword__link">
+                              <!-- 2021.03.10 : del : 빠른검색 문구 제거
+                              <span class="quick-keyword__tag">빠른검색</span>
+                              -->
+                              <span class="quick-keyword__text">보이스피싱 <mark>신고</mark></span>
+                            </a>
+                          </li>
+                          <li class="quick-keyword__item">
+                            <a href="" class="quick-keyword__link">
+                              <!-- 2021.03.10 : del : 빠른검색 문구 제거
+                              <span class="quick-keyword__tag">빠른검색</span>
+                              -->
+                              <span class="quick-keyword__text">보이스피싱 <mark>신고</mark></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //2021.03.05 : add : 빠른검색 레이어 추가 -->
+                  </form>
+                </div>
+                <div class="gnb-etc-nav">
+                  <ul class="gnb-etc-nav__list">
+                    <li class="gnb-etc-nav__item">
+                      <a href="" class="gnb-etc-nav__link">분실/도난신고</a>
+                    </li>
+                    <li class="gnb-etc-nav__item">
+                      <a href="" class="gnb-etc-nav__link">보이스피싱 신고</a>
+                    </li>
+                    <li class="gnb-etc-nav__item">
+                      <a href="" class="gnb-etc-nav__link">수화상담</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- DD : data-initial 값으로 먼저 보일 메뉴 설정 -->
+              <div class="gnb__body js-ui-tab-panel" data-initial="gnb-3">
+                <div class="gnb__tab">
+                  <ul class="gnb__tab-list">
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-1">카드이용</a>
+                    </li>
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-2">나의 정보</a>
+                    </li>
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-3">카드신청</a>
+                    </li>
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-4">대출</a>
+                    </li>
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-5">분실신고</a>
+                    </li>
+                    <li class="gnb__tab-item">
+                      <a href="" class="gnb__tab-link" data-tab-open="gnb-6">가맹점</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="gnb__panel">
+                  <div class="gnb__panel-item" data-tab="gnb-1">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">이용/취소내역</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">이번달 명세서</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">카드실적 조회</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">다음달 결제예정금액</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">즉시결제</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">이용가능한도</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">혜택조회</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gnb__panel-item" data-tab="gnb-2">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">보유카드</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">개인정보</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">사용등록</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">비밀번호 등록/변경</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">결제일</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">결제계좌</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gnb__panel-item" data-tab="gnb-3">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">카드신청</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">재발급</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gnb__panel-item" data-tab="gnb-4">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">단기카드대출</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">장기카드대출</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gnb__panel-item" data-tab="gnb-5">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">보이스피싱 신고</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">분실신고</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">분실해제</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gnb__panel-item" data-tab="gnb-6">
+                    <ul class="gnb__nav-list">
+                      <li class="gnb__nav-item">
+                        <a href="" class="gnb__nav-link">승인요청</a>
+                      </li>
+                      <li class="gnb__nav-item">
+                        <!-- 2021.03.10 : mod : 문구 수정 -->
+                        <a href="" class="gnb__nav-link">승인내역/취소</a>
+                        <!-- //2021.03.10 : mod : 문구 수정 -->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- //layer: GNB -->
+
+        <div class="contents-wrap contents-wrap--registration-of-use">
+          <div class="result-contents">
+            <div class="result-contents__icon"></div>
+            <p class="result-contents__title">
+              <!-- 2021.04.01 : mod : 문구 수정 -->
+              사용등록이<br />
+              <!-- //2021.04.01 : mod : 문구 수정 -->
+              완료되었습니다.
+            </p>
+          </div>
+
+          <div class="primary-table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>카드번호</th>
+                  <td class="align-right">4021-75**-****-0453</td>
+                </tr>
+                <tr>
+                  <th>상태</th>
+                  <td class="align-right">등록완료</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ui-buttons">
+            <ul class="ui-buttons__list">
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button">확인</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom-fix-wrap js-not-inert">
+          <div class="quick-menu">
+            <a href="" class="quick-menu__opener" data-layer-open="layer-quick-menu">
+              <span class="for-a11y">빠른 메뉴 열기</span>
+            </a>
+          </div>
+          <div class="call-end">
+            <button type="button" class="ui-button call-end__button">
+              <span class="for-a11y">통화종료</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- layer: 빠른 메뉴 -->
+        <div class="layer-wrap layer-quick-menu" data-layer="layer-quick-menu">
+          <button type="button" class="ui-button layer-quick-menu__background-close" data-role="layerClose">
+            <span class="for-a11y">다이렉트 웹 계속 이용하기</span>
+          </button>
+          <nav class="layer-container">
+            <h2 class="for-a11y">빠른 메뉴</h2>
+            <ul class="layer-quick-menu__list">
+              <li class="layer-quick-menu__item">
+                <a href="" class="layer-quick-menu__button layer-quick-menu__button--chat">채팅 상담</a>
+              </li>
+              <li class="layer-quick-menu__item">
+                <a href="" class="layer-quick-menu__button layer-quick-menu__button--booking">상담 예약</a>
+              </li>
+              <li class="layer-quick-menu__item">
+                <button type="button" class="ui-button layer-quick-menu__close" data-role="layerClose">다이렉트 웹 계속 이용하기</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- //layer: 빠른 메뉴 -->
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>
